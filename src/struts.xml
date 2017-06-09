@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+	<constant name="struts.objectFactory" value="spring"/>
+	
+	<package name="default" extends="struts-default">
+	
+		<default-action-ref name="index"/>
+	
+		<action name="index" class="cn.jbit.ssh.action.WorkorderAction">
+			<result>/WEB-INF/views/index.jsp</result>
+		</action>
+		
+		<action name="addOrder" class="cn.jbit.ssh.action.WorkorderAction" method="addOrder">
+			<result>/WEB-INF/views/addOrder.jsp</result>
+			<result name="input" type="chain">index</result>
+		</action>
+		
+		<action name="addSave" class="cn.jbit.ssh.action.WorkorderAction" method="addSave">
+			<result type="redirectAction">list</result>
+			<result name="input">/WEB-INF/views/addOrder.jsp</result>
+		</action>
+		
+		<action name="list" class="cn.jbit.ssh.action.WorkorderAction" method="list">
+			<result>/WEB-INF/views/list.jsp</result>
+		</action>
+	
+	</package>
+
+</struts>    

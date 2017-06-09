@@ -1,0 +1,74 @@
+@CHARSET "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Microsoft Yahei";
+	font-size: 14px;
+}
+
+body {
+	padding-top: 20px;
+}
+
+.main {
+	width: 90%;
+	margin: 0 auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+}
+
+.main .title {
+	margin-bottom: 15px;
+	padding-bottom: 5px;
+	font-size: 20px;
+	font-weight: normal;
+	border-bottom: 1px solid #777;
+	text-align: center;
+}
+
+.main .title span {
+	display: inline-block;
+	font-size: 20px;
+}
+
+.main .tab {
+	width: 100%;
+}
+
+.tab .head {
+	background: #aaa;
+}
+
+.tab .label {
+	background-color: #aaa;
+	text-align: right;
+	font-weight: bold;
+}
+
+.tab th,
+.tab,
+.tab td {
+	border: 1px solid #777;
+	border-collapse: collapse;
+}
+
+.tab th,
+.tab td {
+	height: 26px;
+	line-height: 26px;
+	padding-left: 5px;
+}
+
+.main p {
+	text-align: center;
+}
+
+.error,
+.required {
+	color: red;
+}
+
+.success {
+	color: green;
+}
